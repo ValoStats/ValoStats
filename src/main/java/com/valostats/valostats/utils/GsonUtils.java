@@ -14,7 +14,7 @@ public class GsonUtils {
 
     public static String getApiKey() {
         try {
-            String content = new String(Files.readAllBytes(Paths.get("secrets/secrets.json")));
+            String content = new String(Files.readAllBytes(Paths.get("secrets.json")));
             JsonObject secret = gson.fromJson(content, JsonObject.class);
             String key = secret.getAsJsonObject("secrets").get("apiKey").getAsString();
             if (key == null) {
