@@ -5,9 +5,6 @@ import com.calmwolfs.ktvalorantapi.datatypes.PlayerName;
 import com.calmwolfs.ktvalorantapi.datatypes.SearchSize;
 import com.calmwolfs.ktvalorantapi.enums.Region;
 import com.calmwolfs.ktvalorantapi.models.StoredMatch;
-import com.calmwolfs.ktvalorantapi.models.ValorantMatch;
-import com.calmwolfs.valorantmodelapi.ValorantModelApi;
-import com.calmwolfs.valorantmodelapi.models.Agent;
 import com.valostats.valostats.utils.GsonUtils;
 
 import java.io.IOException;
@@ -24,7 +21,7 @@ public class ValoStats {
 //        List<String> agentNames = agentList.stream().map(Agent::getDisplayName).toList();
 //        System.out.println(agentNames);
 
-        List<StoredMatch> matches = api.getStoredMatches(Region.ASIA_PACIFIC, new PlayerName("dloraH#0001"), new SearchSize(10), null, null);
+        List<StoredMatch> matches = api.getStoredMatches(Region.ASIA_PACIFIC, new PlayerName("Scooby dooby doo#wheru"), new SearchSize(10), null, null);
         int size = matches.size();
         System.out.println(size);
 
