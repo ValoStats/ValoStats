@@ -2,6 +2,10 @@ package com.valostats.valostats;
 
 import com.calmwolfs.ktvalorantapi.KtValorantApi;
 import com.calmwolfs.ktvalorantapi.datatypes.PlayerName;
+import com.calmwolfs.ktvalorantapi.datatypes.SearchSize;
+import com.calmwolfs.ktvalorantapi.enums.Region;
+import com.calmwolfs.ktvalorantapi.models.StoredMatch;
+import com.calmwolfs.ktvalorantapi.models.ValorantMatch;
 import com.calmwolfs.valorantmodelapi.ValorantModelApi;
 import com.calmwolfs.valorantmodelapi.models.Agent;
 import com.valostats.valostats.utils.GsonUtils;
@@ -16,8 +20,15 @@ public class ValoStats {
         KtValorantApi api = new KtValorantApi(apiKey);
         System.out.println(api.getAccountDetails(new PlayerName("dloraH#0001"), false));
 
-        List<Agent> agentList = ValorantModelApi.INSTANCE.getAgents(false);
-        List<String> agentNames = agentList.stream().map(Agent::getDisplayName).toList();
-        System.out.println(agentNames);
+//        List<Agent> agentList = ValorantModelApi.INSTANCE.getAgents(false);
+//        List<String> agentNames = agentList.stream().map(Agent::getDisplayName).toList();
+//        System.out.println(agentNames);
+
+        List<StoredMatch> matches = api.getStoredMatches(Region.ASIA_PACIFIC, new PlayerName("dloraH#0001"), new SearchSize(10), null, null);
+        int size = matches.size();
+        System.out.println(size);
+
+
+
     }
 }
