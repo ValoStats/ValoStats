@@ -19,8 +19,8 @@ repositories {
 dependencies {
     implementation(kotlin("stdlib"))
     implementation("com.google.code.gson:gson:2.11.0")
-    implementation("com.github.CalMWolfs:KtValorantApi:1.0.1")
-    implementation("com.github.CalMWolfs:ValorantModelApi:1.2.3")
+    implementation("com.github.CalMWolfs:KtValorantApi:1.0.2")
+    implementation("com.github.CalMWolfs:ValorantModelApi:1.2.4")
 }
 
 kotlin {
