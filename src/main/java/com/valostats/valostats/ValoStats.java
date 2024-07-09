@@ -17,15 +17,9 @@ public class ValoStats {
         KtValorantApi api = new KtValorantApi(apiKey);
         System.out.println(api.getAccountDetails(new PlayerName("dloraH#0001"), false));
 
-//        List<Agent> agentList = ValorantModelApi.INSTANCE.getAgents(false);
-//        List<String> agentNames = agentList.stream().map(Agent::getDisplayName).toList();
-//        System.out.println(agentNames);
-
         List<StoredMatch> matches = api.getStoredMatches(Region.ASIA_PACIFIC, new PlayerName("Scooby dooby doo#wheru"), new SearchSize(10), null, null);
         int size = matches.size();
         System.out.println(size);
-
-
 
     }
 }
